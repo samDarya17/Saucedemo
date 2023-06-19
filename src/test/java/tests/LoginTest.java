@@ -19,14 +19,14 @@ public class LoginTest extends BaseTest{
     @Test
     public void loginUserNameShouldBeRequared(){
         loginPage.open();
-        loginPage.login("","secret_sauce")
-        assertEquals((loginPage.getClass(),"Epic sadface: Username is required");
+        loginPage.login("","secret_sauce");
+        assertEquals((loginPage.getClass() ,"Epic sadface: Username is required"));
     }
     @Test
     public void loginBlockUser(){
         loginPage.open();
         loginPage.login("locked_out_user","secret_sauce");
-        assertEquals(loginPage.getErrorMessage("Epic sadface: Sorry, this user has been locked out."));
+        assertEquals(loginPage.getErrorMessage() ,"Epic sadface: Sorry, this user has been locked out."));
 
     }
 }

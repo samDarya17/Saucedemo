@@ -8,6 +8,8 @@ public class LoginPage extends BasePage {
     public static  final By PASSWORD = By.id("password");
     public static  final By LOGIN_BUTTON = By.id("login-button");
     public static  final By ERROR_MESSAGE = By.id("//h3[@data-test='error']");
+    public double getErrorMessage;
+
     public LoginPage(WebDriver driver){
         super(driver);
     }
