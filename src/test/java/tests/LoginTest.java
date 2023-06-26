@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
@@ -13,14 +14,14 @@ public class LoginTest extends BaseTest{
 
         loginPage.open();
         loginPage.login("standard_user","secret_sauce");
-        assertTrue(inventoryPage.titleIsVisible);
+        Assert.assertTrue(inventoryPage.titleIsVisible);
 
     }
     @Test
     public void loginUserNameShouldBeRequared(){
         loginPage.open();
         loginPage.login("","secret_sauce");
-        assertEquals(loginPage.getClass() ,"Epic sadface: Username is required");
+        Assert.assertEquals(loginPage.getClass() ,"Epic sadface: Username is required");
     }
     @Test
     public void loginBlockUser(){
@@ -28,5 +29,18 @@ public class LoginTest extends BaseTest{
         loginPage.login("locked_out_user","secret_sauce");
         assertEquals(loginPage.getErrorMessage() ,"Epic sadface: Sorry, this user has been locked out.");
 
+    }
+    @Test
+    public void userDoesNotCompleteNamePassword(){
+        loginPage.open();
+        loginPage.login("","");
+        Assert.assertEquals(loginPage.getErrorMessage(),"Epic sadface: Username is required");
+
+    }
+    @Test
+    public void userEntersSpacesNamePassword(){
+        loginPage.open();
+        loginPage.login(" "," ");
+        Assert.assertEquals(loginPage.getErrorMessage(),"Epic sadface: Username is required");
     }
 }
