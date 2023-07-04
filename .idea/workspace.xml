@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9aa0823e-c39c-4c29-a675-1c0774c64d7c" name="Changes" comment="saucedemo">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Locator/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Locator/Locator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CartTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/InventoryTes.java" afterDir="false" />
+    <list default="true" id="9aa0823e-c39c-4c29-a675-1c0774c64d7c" name="Changes" comment="дописала">
+      <change afterPath="$PROJECT_DIR$/src/test/java/HerocuApp/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HerocuApp/DynamicControls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HerocuApp/FrameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +46,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/q1022 Java/Sharlane/src/test/java/HeroApp&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -61,7 +56,7 @@
       <recent name="pages" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.FrameTest">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="untitled1" />
       <method v="2">
@@ -71,6 +66,58 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="untitled1" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicControls" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Sharlane" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HerocuApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HerocuApp" />
+      <option name="MAIN_CLASS_NAME" value="HerocuApp.DynamicControls" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicControls.dynamicTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Sharlane" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HerocuApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HerocuApp" />
+      <option name="MAIN_CLASS_NAME" value="HerocuApp.DynamicControls" />
+      <option name="METHOD_NAME" value="dynamicTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrameTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Sharlane" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HerocuApp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HerocuApp" />
+      <option name="MAIN_CLASS_NAME" value="HerocuApp.FrameTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,6 +142,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FrameTest" />
+        <item itemvalue="TestNG.DynamicControls" />
+        <item itemvalue="TestNG.DynamicControls.dynamicTest" />
         <item itemvalue="TestNG.LocatorsTest.checkLocators" />
       </list>
     </recent_temporary>
@@ -136,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687790497372</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="дописала">
+      <created>1687796401282</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687796401282</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +214,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="saucedemo" />
-    <option name="LAST_COMMIT_MESSAGE" value="saucedemo" />
+    <MESSAGE value="дописала" />
+    <option name="LAST_COMMIT_MESSAGE" value="дописала" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/untitled1$DynamicControls.ic" NAME="DynamicControls Coverage Results" MODIFIED="1688299674467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>HerocuApp.*</FILTER>
+    </SUITE>
   </component>
 </project>
