@@ -16,7 +16,11 @@ public class DynamicControls extends BaseTest{
     @Test
     public void dynamicTest(){
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
-        driver.findElement(By.xpath("//button[contains(text(),'Remove')]")).click();
+        driver.wait(until.elementIsNotVisible(driver.findElement(By.id('checkbox'))),10000);
+        driver.findElement(By.xpath("//button[contains(text(),'Add')]")).click();
+        driver.wait(until.elementIsVisible(driver.findElement(By.id('checkbox'))),10000);
+
+
         Instant wait = null;
         wait.until(ExpectedConditions.textToBe(By.id("message"),"It's gone!");
 

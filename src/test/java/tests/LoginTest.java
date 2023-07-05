@@ -1,46 +1,56 @@
 package tests;
 
-import org.testng.Assert;
+import static org.testng.Assert.*;
+
 import org.testng.annotations.Test;
-import pages.LoginPage;
 
-import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertTrue;
-
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
     @Test
-    public void loginUserNameWithValidData(){
+    public void logInWithValidData() {
+        loginPage.logInWithValidData();
 
+        assertTrue(inventoryPage.isPageOpen());
+    }
 
-        loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
-        Assert.assertTrue(inventoryPage.titleIsVisible);
+    @Test
+    public void leaveUserFieldEmpty() {
+        loginPage.openWebsite();
+        loginPage.isPageOpen();
+        loginPage.authorization("", "secret_sauce");
+
+        assertEquals(loginPage.getErrorMassage(), "Epic sadface: Username is required",
+                "Текст сообщения неверный или отсутствует");
+    }
+
+    @Test
+    public void leavePasswordFieldEmpty() {
+        loginPage.openWebsite();
+        loginPage.isPageOpen();
+        loginPage.authorization("standard_user", "");
+
+        assertEquals(loginPage.getErrorMassage(), "Epic sadface: Password is required",
+                "Текст сообщения неверный или отсутствует");
+    }
+
+    @Test
+    public void lockedOutUser() {
+        loginPage.openWebsite();
+        loginPage.isPageOpen();
+        loginPage.authorization("locked_out_user", "secret_sauce");
+
+        assertEquals(loginPage.getErrorMassage(), "Epic sadface: Sorry, this user has been locked out.",
+                "Текст сообщения неверный или отсутствует");
+    }
+
+    @Test
+    public void inputDataOfAnUnregisteredUser() {
+        loginPage.openWebsite();
+        loginPage.isPageOpen();
+        loginPage.authorization("A_b_c_d_f", "12_34_56");
+
+        assertEquals(loginPage.getErrorMassage(), "Epic sadface: Username and password do not match any user in this service",
+                "Текст сообщения неверный или отсутствует");
 
     }
-    @Test
-    public void loginUserNameShouldBeRequared(){
-        loginPage.open();
-        loginPage.login("","secret_sauce");
-        Assert.assertEquals(loginPage.getClass() ,"Epic sadface: Username is required");
-    }
-    @Test
-    public void loginBlockUser(){
-        loginPage.open();
-        loginPage.login("locked_out_user","secret_sauce");
-        assertEquals(loginPage.getErrorMessage() ,"Epic sadface: Sorry, this user has been locked out.");
 
-    }
-    @Test
-    public void userDoesNotCompleteNamePassword(){
-        loginPage.open();
-        loginPage.login("","");
-        Assert.assertEquals(loginPage.getErrorMessage(),"Epic sadface: Username is required");
-
-    }
-    @Test
-    public void userEntersSpacesNamePassword(){
-        loginPage.open();
-        loginPage.login(" "," ");
-        Assert.assertEquals(loginPage.getErrorMessage(),"Epic sadface: Username is required");
-    }
 }

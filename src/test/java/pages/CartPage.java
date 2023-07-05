@@ -20,6 +20,12 @@ public class CartPage extends BasePage{
     public CartPage(WebDriver driver) {
         super(driver);
     }
+
+    @Override
+    public boolean isPageOpen() {
+        return false;
+    }
+
     public void open() {
         driver.get("https://www.saucedemo.com");
     }

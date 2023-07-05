@@ -1,18 +1,28 @@
 package pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePage {
+import java.net.URL;
+
+public abstract class BasePage {
     WebDriver driver;
-    final String URL = "https://www.saucedemo.com/";
-
-    final String itemNameFromInventory ="//div[text() ='Sauce Labs Backpack']";
-
-    public BasePage(WebDriver driver) {
+    WebDriverWait wait;
+    String url = "https://www.saucedemo.com/";
+    public BasePage(WebDriver driver){
         this.driver = driver;
-   }
+        wait = new WebDriverWait(driver,5);
+    }
 
+    public abstract boolean isPageOpen();
 
-    public void titleOpenCartIsVisible() {
+    public boolean isExist(By locator){
+        try
+        {return driver.findElement(locator).isDisplayed();
+        }catch (NoSuchElementException e){
+            return false;
+        }
     }
 }
